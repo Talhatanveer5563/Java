@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".user_register">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/shape_header"/>
+    <TextView
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:textStyle="bold"
+        android:textSize="24dp"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/login_shape"
+        android:padding="15dp"
+        android:layout_marginTop="15dp"
+        android:clickable="true"/>
+    <ImageButton
+        android:id="@+id/get_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/ic_get_location"
+        android:padding="15dp"
+        android:layout_marginTop="25dp"
+        android:clickable="true"/>
+    <TextView
+        android:id="@+id/user_registeration_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:padding="15dp"
+        android:textSize="25dp"
+        android:fontFamily="sans-serif-black"
+        android:background="@drawable/login_shape"
+        android:gravity="center"
+        android:text="Register" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/user_registeration_text">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/Profile_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ic_person"
+            app:civ_border_color="@color/blue_dark"
+            app:civ_border_width="5dp" />
+
+        <EditText
+            android:id="@+id/user_registeration_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Profile_image"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="25dp"
+            android:ems="10"
+            android:hint="Full Name"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/user_registeration_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_registeration_name"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="25dp"
+            android:ems="10"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress" />
+        <EditText
+            android:id="@+id/user_registeration_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_registeration_email"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="25dp"
+            android:ems="10"
+            android:hint="************"
+            android:inputType="textPassword" />
+    <EditText
+        android:id="@+id/user_registeration_cpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_registeration_password"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="25dp"
+        android:ems="10"
+        android:hint="************"
+        android:inputType="textPassword" />
+<EditText
+    android:id="@+id/country"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/user_registeration_cpassword"
+    android:layout_marginLeft="25dp"
+    android:layout_marginRight="25dp"
+    android:hint="Country"
+    android:onClick="onSelectCountry"
+    tools:ignore="OnClick" />
+
+    <LinearLayout
+        android:id="@+id/Address_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/country"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp">
+        <EditText
+            android:id="@+id/State"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="State"
+            android:layout_weight="1"
+            />
+        <EditText
+            android:id="@+id/City"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="City"
+            android:layout_weight="1"
+            />
+        <EditText
+            android:id="@+id/Postal_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Postal Code"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+    <EditText
+        android:id="@+id/user_registeration_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Address_detail"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="10dp"
+        android:hint="Address"
+        android:inputType="text"
+        />
+    <LinearLayout
+        android:id="@+id/Date_of_Birth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_registeration_address"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp">
+        <EditText
+            android:id="@+id/Birth_Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Day"
+            android:inputType="number"
+            android:layout_weight="1"
+            />
+        <EditText
+            android:id="@+id/Birth_Month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Month"
+            android:inputType="number"
+            android:layout_weight="1"
+            />
+        <EditText
+            android:id="@+id/Birth_Year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Year"
+            android:inputType="number"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+<Button
+    android:id="@+id/user_register_register"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Register"
+    android:textColor="@color/white"
+    android:backgroundTint="@color/blue_dark"
+    android:layout_below="@id/Date_of_Birth"
+    android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

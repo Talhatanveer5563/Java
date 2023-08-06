@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ForgetPass">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/shape_header"/>
+
+    <TextView
+        android:id="@+id/Forgetpass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:padding="15dp"
+        android:textSize="35dp"
+        android:fontFamily="sans-serif-black"
+        android:background="@drawable/login_shape"
+        android:gravity="center"
+        android:text="Forget Password" />
+
+    <EditText
+        android:id="@+id/reset_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:layout_below="@id/Forgetpass"
+        android:layout_marginTop="160dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:hint="Email Address"/>
+
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reset_email"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="Reset Password"
+        android:backgroundTint="@color/blue_dark"/>
+
+    <TextView
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:textStyle="bold"
+        android:textSize="24dp"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/login_shape"
+        android:padding="15dp"
+        android:layout_marginTop="15dp"
+        android:clickable="true"
+    />
+</RelativeLayout>

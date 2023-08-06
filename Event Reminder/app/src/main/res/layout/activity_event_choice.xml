@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".event_choice">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_weight="1"
+           android:background="@color/blue_dark">
+           <TextView
+               android:id="@+id/become_seller"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Event List"
+               android:layout_centerVertical="true"
+               android:fontFamily="@font/bungee_shade"
+               android:textColor="@color/black"
+               android:shadowColor="@color/white"
+               android:textSize="60dp"
+               android:gravity="center"/>
+
+       </RelativeLayout>
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_weight="1"
+           android:background="@color/blue_light">
+           <TextView
+               android:id="@+id/become_user"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Create Reminder"
+               android:layout_centerVertical="true"
+               android:fontFamily="@font/bungee_shade"
+               android:textColor="@color/black"
+               android:shadowColor="@color/white"
+               android:textSize="60dp"
+               android:gravity="center"/>
+
+       </RelativeLayout>
+   </LinearLayout>
+</RelativeLayout>
